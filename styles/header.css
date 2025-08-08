@@ -1,13 +1,12 @@
 #primary {
-  padding-block: 20px;
+  padding-block: 1.25rem;
 
   div {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
   }
 
-  /* nesting css */
   div:nth-child(2) {
     margin-inline: auto;
   }
@@ -18,8 +17,40 @@
 }
 
 #secondary {
-  padding-block: 14px;
+  padding-block: 0.875rem;
   border: solid 1px var(--stroke-color);
   border-inline: none;
   justify-content: space-around;
+}
+
+@media (max-width: 23.4375rem) {
+  #primary {
+    & div:nth-child(2) img {
+      width: 7.5rem;
+    }
+
+    & div strong {
+      display: none;
+    }
+  }
+
+  #secondary {
+    min-width: 22.5rem;
+    position: relative;
+    margin-left: -8vw;
+    margin-right: -8vw;
+    padding-inline: 1.8rem 1.8rem;
+
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    & a {
+      width: max-content;
+    }
+
+    & ::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
