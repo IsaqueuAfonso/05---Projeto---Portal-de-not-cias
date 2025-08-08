@@ -85,7 +85,8 @@ main {
     padding-inline: 1rem;
   }
   main {
-    row-gap: 1rem;
+    margin-block: 1rem;
+    row-gap: 2rem;
     grid-template-areas:
       "featured"
       "weekly"
